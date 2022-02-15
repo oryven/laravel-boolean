@@ -2,8 +2,6 @@
 
 @section('content')
 
-<h3>hello</h3>
-
-<postcards-comp></postcard-comp>
+<h3>create</h3>
 
 @endsection

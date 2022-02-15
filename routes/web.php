@@ -13,4 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'GuestController@home') -> name('home');
+// Route::get('/', 'GuestController@home') -> name('home');
+// Auth::routes();
+
+Route::get('/', 'GuestController@home')->name('home');
+
+Route::get('/api/postcard/list', 'ApiController@getPostcards') -> name('postcard.list');
