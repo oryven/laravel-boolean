@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Postcard;
 
 class GuestController extends Controller
 {
@@ -11,7 +12,13 @@ class GuestController extends Controller
     }
 
     public function createPostcard() {
-        return view('pages.create');
+        return view('pages.create-postcard');
+    }
+
+    public function storePostcard(Request $request) {
+        $data = $request -> all();
+        dd($data);
+
     }
 
 }

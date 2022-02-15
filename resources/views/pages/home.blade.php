@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h3>hello</h3>
+<a class="btn" href="{{route('postcard.create')}}">Crea il tuo post</a>
 
 <postcards-comp></postcard-comp>
 
