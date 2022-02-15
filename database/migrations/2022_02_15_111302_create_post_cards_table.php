@@ -13,7 +13,7 @@ class CreatePostCardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_cards', function (Blueprint $table) {
+        Schema::create('postcards', function (Blueprint $table) {
             $table->id();
             $table->string('sender');
             $table->string('addres');
@@ -30,6 +30,6 @@ class CreatePostCardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_cards');
+        Schema::dropIfExists('postcards');
     }
 }
