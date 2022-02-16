@@ -16,8 +16,24 @@ class GuestController extends Controller
     }
 
     public function storePostcard(Request $request) {
-        $data = $request -> all();
-        dd($data);
+        $data = $request -> validate([
+            'sender' => 'required|string',
+            'addres' => 'required|string',
+            'text' => 'required|string',
+            'image' => 'required|image'
+        ]);
+
+        $imageFile = $data['image'];
+
+        $imageName = rand(100000, 999999) . '_' . time() . '.' . $imageFile -> getClientOriginalExtension();
+
+        $imageFile -> storeAs('/postcards/', $imageName, 'public');
+
+        $data['image'] = $imageName;
+
+        Postcard::create($data);
+
+        return redirect() -> route('home');
 
     }
 

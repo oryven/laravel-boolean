@@ -4,6 +4,6 @@
 
 <a class="btn" href="{{route('postcard.create')}}">Crea il tuo post</a>
 
-<postcards-comp></postcard-comp>
+<postcards-comp></postcards-comp>
 
 @endsection

@@ -37536,7 +37536,12 @@ var render = function () {
         _c("span", [_vm._v("Corpo del testo: " + _vm._s(postcard.text))]),
         _vm._v(" "),
         postcard.image
-          ? _c("img", { attrs: { src: "/storage/images/" + postcard.image } })
+          ? _c("img", {
+              attrs: {
+                src: "/storage/postcards/" + postcard.image,
+                width: "50px",
+              },
+            })
           : _c("p", [_vm._v("No image")]),
       ])
     }),

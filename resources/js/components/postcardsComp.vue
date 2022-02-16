@@ -4,7 +4,7 @@
             <span>Mittente: {{postcard.sender}}</span>
             <span>Indirizzo: {{postcard.address}}</span>
             <span>Corpo del testo: {{postcard.text}}</span>
-            <img v-if="postcard.image" :src="'/storage/images/' + postcard.image">
+            <img v-if="postcard.image" :src="'/storage/postcards/' + postcard.image" width="50px" />
             <p v-else>No image</p>
         </div>
     </div>
